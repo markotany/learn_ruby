@@ -6,3 +6,4 @@ end
 def greet(string)
 return "Hello, #{string}!"
 end
+//
