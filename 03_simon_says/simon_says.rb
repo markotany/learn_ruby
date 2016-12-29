@@ -18,14 +18,14 @@ return word[0...n]
 end
 
 def first_word(s)
-  s.split(" ")[0]
+  s.split(" ").first
 
 end
 
 def titleize(s)
 title = s.split(" ")
 title.each {|s| s.capitalize! if (s!="and" and s!= "the" and s!="over")}
-title[0].capitalize!
+title.first.capitalize!
  
 title.join(" ")
 end
