@@ -1,5 +1,8 @@
 #write your code here
-def function hello
-return  puts "hello!"
+def hello
+return "Hello!"
 end
 
+def greet(string)
+return "Hello, #{string}!"
+end
