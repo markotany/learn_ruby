@@ -12,12 +12,19 @@ end
 
 
 def translate(s)
-#words = s.split(" ")
- # words = words.map do |word|
-#letters = word.split(//)
+
 	words = s.split(" ")
-   words = words.map do |word|
+        words = words.map do |word|
 	letters = word.split('')
+	if letters[0] == letters[0].upcase
+	temp = letters[0]
+	letters[0] = letters[0].downcase
+	state = true
+
+end
+
+
+
 	until letters[0] =~ /[aeiou]/ do
 	
 		if (letters[0] == "q" and letters[1]=="u")
@@ -28,6 +35,10 @@ def translate(s)
 
 	end
 	 letters << "ay"
+	 if state 
+	 letters[0].upcase!
+	 state = false
+	 end
 	letters.join
    end
    words.join(' ')
